@@ -11,8 +11,11 @@ public class HomePage {
     }
 
     public void open() {
-        System.out.println("trying to navigate to " + url);
-        driver.navigate().to(url);
+        driver.get(url);
+    }
+
+    public void navigateToElementsPage() {
+        driver.get(url + "elements");
     }
 
     public String getTitle() {
