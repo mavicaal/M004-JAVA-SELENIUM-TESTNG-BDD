@@ -38,6 +38,10 @@ public class ElementsPage {
         return By.xpath("//div[contains(@class,'left-pannel')]//span[normalize-space() = '" + text + "']");
     }
 
+    public void navigateToElementsPage() {
+        driver.get(driver.getCurrentUrl() + "elements");
+    }
+
     // Returns a list of missing/hidden items (empty if all present)
     public List<String> findMissingItems() {
         List<String> missing = new ArrayList<>();
