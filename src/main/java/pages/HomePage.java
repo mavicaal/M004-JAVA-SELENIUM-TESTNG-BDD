@@ -12,7 +12,7 @@ public class HomePage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    private String url = "https://demoqa.com/";
+    private static final String URL = "https://demoqa.com/";
     // Locators for main cards on DemoQA homepage
     private By elementsCard = By.xpath("//h5[text()='Elements']");
     private By formsCard = By.xpath("//h5[text()='Forms']");
@@ -25,15 +25,10 @@ public class HomePage {
     public HomePage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
     }
 
     public void open() {
-        driver.get(url);
-    }
-
-    public void navigateToElementsPage() {
-        driver.get(url + "elements");
+        driver.get(URL);
     }
 
     // Visibility checks

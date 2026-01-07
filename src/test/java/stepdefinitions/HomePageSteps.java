@@ -10,7 +10,7 @@ public class HomePageSteps {
     WebDriver driver;
     HomePage homePage;
 
-    @Given("I open the DemoQA home page")
+    @Given("User opens the DemoQA home page")
     public void i_open_the_demoqa_home_page() {
         driver = DriverFactory.getDriver();
         homePage = new HomePage(driver);
